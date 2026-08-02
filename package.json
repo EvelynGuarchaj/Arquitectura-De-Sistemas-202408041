@@ -1,0 +1,31 @@
+{
+  "name": "tareas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvelynGuarchaj/Arquitectura-De-Sistemas-202408041.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvelynGuarchaj/Arquitectura-De-Sistemas-202408041/issues"
+  },
+  "homepage": "https://github.com/EvelynGuarchaj/Arquitectura-De-Sistemas-202408041#readme",
+  "dependencies": {
+    "@hono/node-server": "^2.0.12",
+    "hono": "^4.12.33",
+    "hono-pino": "^0.10.3",
+    "pino": "^10.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.4",
+    "typescript": "^7.0.2"
+  }
+}
