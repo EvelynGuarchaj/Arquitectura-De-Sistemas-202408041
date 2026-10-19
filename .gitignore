@@ -1,2 +1,7 @@
 node_modules/
 dist/
+.turbo/
+.vitest/
+*.log
+.env
+.DS_Store
