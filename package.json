@@ -1,0 +1,36 @@
+{
+  "name": "arquitectura-de-sistemas-202408041",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.14.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:api": "turbo run dev --filter=api",
+    "build:web": "turbo run build --filter=web",
+    "build:api": "turbo run build --filter=api",
+    "build:shared": "turbo run build --filter=@coquette/shared",
+    "test:web": "turbo run test --filter=web",
+    "test:api": "turbo run test --filter=api",
+    "test:shared": "turbo run test --filter=@coquette/shared",
+    "start:api": "turbo run start --filter=api"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "turbo": "^2.11.9"
+  }
+}
