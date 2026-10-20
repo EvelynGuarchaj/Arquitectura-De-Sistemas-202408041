@@ -1,17 +1,18 @@
-### Cita inválida → 400 con los mensajes de validarCita()
+### Cita invalida → 400 con los mensajes de validarCita()
 POST http://localhost:3001/api/citas
-
 Content-Type: application/json
+
 {
-"disenoId": "spooky-coquette",
-"nombreCliente": "Ev",
-"telefono": "123",
-"fecha": "2026-10-18",
-"hora": "08:00",
-"largo": "corto",
-"extras": []
+  "disenoId": "spooky-coquette",
+  "nombreCliente": "Ev",
+  "telefono": "123",
+  "fecha": "2026-10-18",
+  "hora": "08:00",
+  "largo": "corto",
+  "extras": []
 }
-### Cita válida
+
+### Cita valida → 201 con el total de calcularPrecio()
 POST http://localhost:3001/api/citas
 Content-Type: application/json
 
@@ -25,5 +26,6 @@ Content-Type: application/json
   "extras": ["cromado"],
   "cupon": "COQUETTE10"
 }
+
 ### Citas guardadas
 GET http://localhost:3001/api/citas

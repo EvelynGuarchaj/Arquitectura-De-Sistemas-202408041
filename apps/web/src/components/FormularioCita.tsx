@@ -33,7 +33,7 @@ export function FormularioCita({ diseno, onCerrar }: Props) {
   const [erroresServidor, setErroresServidor] = useState<ErrorCampo[]>([])
   const [confirmada, setConfirmada] = useState<Cita | null>(null)
 
-  //  Misma lógica que usa el backend, desde @coquette/shared
+  //  Misma logica que usa el backend, desde @coquette/shared
   const precio = useMemo(() => calcularPrecio(diseno, form), [diseno, form])
   const errores = useMemo(() => validarCita(form), [form])
 
