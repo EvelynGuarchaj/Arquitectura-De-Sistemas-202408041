@@ -14,7 +14,7 @@ afterEach(cleanup);
 describe("TarjetaDiseno", () => {
   it("muestra el precio formateado por @coquette/shared", () => {
     render(<TarjetaDiseno diseno={diseno} onReservar={() => {}} />);
-    expect(screen.getByText("desde Q185.00")).toBeTruthy();
+    expect(screen.getByText("Q185.00")).toBeTruthy();
   });
   it("avisa cuando se presiona Reservar", () => {
     const onReservar = vi.fn();

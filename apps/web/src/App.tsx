@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { Coleccion, ColeccionId, Diseno } from '@coquette/shared'
 import { obtenerColecciones, obtenerDisenos } from './api'
-import { FormularioCita } from './components/FormularioCita'>
+import { FormularioCita } from './components/FormularioCita'
 import { TarjetaDiseno } from './components/TarjetaDiseno'
 
 export default function App() {
