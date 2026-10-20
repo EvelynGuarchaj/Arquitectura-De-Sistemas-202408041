@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* 🎀 Paleta Coquette Nails Studio */
+:root {
+  --old-lace:#FFFFFF;
+  --pink-mist: #eda2c3;
+  --bubblegum: #f48eb8;
+  --toffee: #985a40;
+  --walnut: #64321b;
+
+  --fondo: var(--old-lace);
+  --texto: var(--walnut);
+  --blanco: #fffaf3;
+  --sombra: 0 10px 28px rgb(100 50 27 / 0.14);
+  --sombra-suave: 0 4px 12px rgb(100 50 27 / 0.1);
+
+  font-family: 'Quicksand', system-ui, sans-serif;
+  color: var(--texto);
+  background-color: var(--fondo);
+  /* lunares rosas de fondo */
+  background-image: radial-gradient(rgb(237 162 195 / 0.35) 2px, transparent 2px);
+  background-size: 26px 26px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 72px; }
+
+h1, h2, h3 { color: var(--walnut); }
+h2, h3 { font-weight: 700; }
+
+/* ---------- Encabezado ---------- */
+.encabezado {
+  text-align: center;
+  background: var(--blanco);
+  border: 2px dashed var(--pink-mist);
+  border-radius: 32px;
+  padding: 28px 16px 22px;
+  box-shadow: var(--sombra-suave);
+}
+.encabezado h1 {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  margin: 0 0 6px;
+  color: var(--bubblegum);
+  text-shadow: 2px 2px 0 var(--walnut);
+}
+.encabezado p { margin: 0; color: var(--toffee); font-weight: 600; }
+
+/* ---------- Botones ---------- */
+button {
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 9px 18px;
+  background: var(--walnut);
+  color: var(--old-lace);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+button:hover { background: var(--toffee); transform: translateY(-1px); }
+button:focus-visible { outline: 3px solid var(--bubblegum); outline-offset: 2px; }
+
+/* ---------- Filtros ---------- */
+.filtros { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 28px 0; }
+.filtros button {
+  background: var(--blanco);
+  color: var(--walnut);
+  border: 2px solid var(--pink-mist);
+}
+.filtros button:hover { background: var(--pink-mist); }
+.filtros button.activo {
+  background: var(--bubblegum);
+  border-color: var(--bubblegum);
+  color: var(--walnut);
+  box-shadow: 0 4px 0 var(--walnut);
+}
+
+/* ---------- Catálogo ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 22px; }
+
+.tarjeta {
+  background: var(--blanco);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.tarjeta:hover { transform: translateY(-4px); border-color: var(--pink-mist); }
+.tarjeta img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; display: block; }
+.tarjeta-cuerpo { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.tarjeta-cuerpo h3 { margin: 2px 0 0; font-size: 1.1rem; }
+.tarjeta-cuerpo p { margin: 0; font-size: 0.9rem; color: var(--toffee); flex: 1; }
+.tarjeta-pie { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 10px; }
+.tarjeta-pie strong { color: var(--walnut); }
+.tarjeta-pie button { white-space: nowrap; background: var(--bubblegum); color: var(--walnut); }
+.tarjeta-pie button:hover { background: var(--pink-mist); }
+
+.etiqueta {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--old-lace);
+  color: var(--toffee);
+  border: 1px solid var(--pink-mist);
+  padding: 2px 10px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+/* ---------- Modal y formulario ---------- */
+.fondo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgb(100 50 27 / 0.45);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  overflow-y: auto;
+}
+.panel {
+  position: relative;
+  background: var(--blanco);
+  border: 3px solid var(--pink-mist);
+  border-radius: 28px;
+  padding: 26px 24px;
+  width: min(520px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--sombra);
+}
+.panel h2 { margin: 0 32px 4px 0; font-size: 1.35rem; }
+.panel label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; }
+.panel input {
+  font: inherit;
+  color: var(--walnut);
+  padding: 9px 12px;
+  border-radius: 14px;
+  border: 2px solid var(--pink-mist);
+  background: var(--old-lace);
+}
+.panel input:focus { outline: none; border-color: var(--bubblegum); background: #fff; }
+.panel input[type='radio'],
+.panel input[type='checkbox'] { accent-color: var(--bubblegum); width: 18px; height: 18px; }
+.panel .opcion { flex-direction: row; align-items: center; font-weight: 500; gap: 8px; }
+.panel fieldset { border: 2px dashed var(--pink-mist); border-radius: 18px; padding: 10px 14px; }
+.panel legend { font-weight: 700; color: var(--toffee); padding: 0 6px; }
+
+.fila { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.cerrar {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--pink-mist);
+  color: var(--walnut);
+  padding: 4px 11px;
+}
+
+.resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--old-lace);
+  border: 2px solid var(--pink-mist);
+  padding: 12px 16px;
+  border-radius: 18px;
+}
+.resumen small { color: var(--toffee); margin-top: 4px; }
+.total { font-size: 1.35rem; color: var(--walnut); }
+
+.panel button[type='submit'] { background: var(--walnut); padding: 12px 18px; }
+.panel button[type='submit']:hover { background: var(--toffee); }
+
+.confirmacion { text-align: center; align-items: center; }
+.confirmacion h2 { font-family: 'Pacifico', cursive; font-weight: 400; color: var(--bubblegum); margin: 0; }
+
+.error { color: #b3261e; font-weight: 600; }
